@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  faunadb:
+    image: fauna/faunadb:latest
+    ports:
+      - "8443:8443"
+      - "8084:8084"
+    volumes:
+      - ./data/faunadb:/var/lib/faunadb
+      - ./data/faunadb-logs:/var/log/faunadb
+      - ./faunadb.yml:/etc/faunadb.yml
+    command: --init --config /etc/faunadb.yml

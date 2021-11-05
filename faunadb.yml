@@ -1,0 +1,13 @@
+---
+accelerate_indexes: true
+auth_root_key: secret
+cluster_name: fauna
+http_max_concurrent_streams: 100
+log_path: /var/log/faunadb
+network_admin_http_address: faunadb
+network_broadcast_address: faunadb
+network_coordinator_http_address: 0.0.0.0
+network_listen_address: faunadb
+shutdown_grace_period_seconds: 0
+storage_data_path: /var/lib/faunadb
+stream_enable_api: true

@@ -1,0 +1,4 @@
+config:
+  aws:region: eu-central-1
+  fauna:secret:
+    secure: AAABADzYSVRn1oDC4CLZgliodGN4qnJa8Hqfa0/ZA9gNuSGm5wmtESweqnkhuEBdTGFk/3PCTtVyTgmGCnmXvUwAmiNNIUk1
