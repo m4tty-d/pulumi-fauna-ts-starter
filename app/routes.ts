@@ -21,9 +21,11 @@ export const getRoutes = (faunaSecret: Output<string>): Route[] =>
     method: route.method,
     eventHandler: new aws.lambda.CallbackFunction(callbackFunctionName(route), {
       callback: route.handler,
+      runtime: "nodejs14.x",
       environment: {
         variables: {
           FAUNA_SECRET: faunaSecret,
+          ...route.envs,
         },
       },
     }),
